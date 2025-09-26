@@ -1,12 +1,11 @@
 // Theme: persistent across pages using localStorage
-// 1) Early inline snippet in each HTML <head> applies the saved theme BEFORE CSS loads (prevents flash)
-// 2) This file wires the toggle and persists the choice until user changes it
+// Applies saved theme and wires the toggle. Works with #themeToggle or #theme-button.
+// If the button contains <i> with Remix Icon, it swaps ri-moon-line/ri-sun-line.
 
 (function initThemeEarlyMirror(){
-  // This mirrors the inline head script logic so SPA-like navigations or script reloads are consistent
   try {
     var t = localStorage.getItem('theme');
-    if (!t) { t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+    if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     if (t === 'dark') document.documentElement.setAttribute('data-theme','dark');
     else document.documentElement.removeAttribute('data-theme');
   } catch(_) {}
@@ -27,19 +26,33 @@ function currentTheme(){
   return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
 }
 
+function findToggleBtn(){
+  return document.getElementById('themeToggle') || document.getElementById('theme-button');
+}
+
 function updateToggleUI(){
-  var btn = document.getElementById('themeToggle');
+  var btn = findToggleBtn();
   if (!btn) return;
+
   var isDark = currentTheme() === 'dark';
   btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
-  // Optional: show the active icon/text
-  btn.textContent = isDark ? '🌜' : '🌞';
+
+  // If there is an icon element inside, prefer swapping icon classes
+  var iconEl = btn.querySelector('i');
+  if (iconEl) {
+    iconEl.classList.remove('ri-moon-line','ri-sun-line');
+    iconEl.classList.add(isDark ? 'ri-sun-line' : 'ri-moon-line'); // show the opposite action
+  } else {
+    // Fallback: text emoji
+    btn.textContent = isDark ? '🌜' : '🌞';
+  }
+
   btn.title = isDark ? 'Switch to light theme' : 'Switch to dark theme';
 }
 
 window.addEventListener('DOMContentLoaded', function(){
   updateToggleUI();
-  var btn = document.getElementById('themeToggle');
+  var btn = findToggleBtn();
   if (btn) {
     btn.addEventListener('click', function(){
       applyTheme(currentTheme() === 'dark' ? 'light' : 'dark');
@@ -49,7 +62,5 @@ window.addEventListener('DOMContentLoaded', function(){
 
 // Keep multiple tabs/windows in sync
 window.addEventListener('storage', function(e){
-  if (e.key === 'theme' && e.newValue) {
-    applyTheme(e.newValue);
-  }
+  if (e.key === 'theme' && e.newValue) applyTheme(e.newValue);
 });
