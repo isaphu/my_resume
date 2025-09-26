@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ISA — Resume</title>
+  <link rel="icon" href="assets/img/isa-favicon3.png" />
+  <script>(function(){try{
+    var t = localStorage.getItem('theme');
+    if(!t){ t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+    if(t==='dark'){ document.documentElement.setAttribute('data-theme','dark'); }
+  }catch(e){}})();</script>
+  <link rel="stylesheet" href="assets/style.css" />  
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand"><a href="index.html">Isa Phuyuthanon</a></div>
+      <nav aria-label="Primary">
+        <a href="index.html">Info</a>
+        <a href="work.html">Work</a>
+        <a href="resume.html" aria-current="page">Resume</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌞 / 🌜</button>
+    </header>
+
+    <main aria-label="Resume">
+      <h1>Resume</h1>
+      <p class="lede">View the PDF below. If your browser doesn't support inline PDFs, use the links to open or download.</p>
+      <div class="resume-actions">
+        <a href="assets/pdf/resume.pdf" download>Download PDF</a>
+        <span>·</span>
+        <a href="assets/pdf/resume.pdf" target="_blank" rel="noopener">Open in new tab</a>
+      </div>
+
+      <object class="pdf-frame" data="assets/pdf/resume.pdf" type="application/pdf" aria-label="Embedded resume PDF">
+        <embed src="assets/pdf/resume.pdf" type="application/pdf" />
+      </object>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer-inner">
+        <span>© <span id="year"></span> ISA Phuyuthanon</span>
+        <span><a href="index.html">Info</a> · <a href="work.html">Work</a> · <a href="resume.html">Resume</a></span>
+        <span>Built with HTML & CSS — theme toggle enabled</span>
+      </div>
+    </footer>
+  </div>
+  <script src="assets/theme.js" defer></script>
+</body>
+</html>
