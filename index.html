@@ -7,12 +7,13 @@
   <meta name="description" content="About ISA Phuyuthanon — product-minded builder. Contact and quick links." />
   <link rel="icon" href="assets/img/isa-favicon3.png" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- Early theme set (prevents flash) -->
   <script>(function(){try{
     var t=localStorage.getItem('theme');
     if(!t){ t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'; }
     if(t==='dark'){ document.documentElement.setAttribute('data-theme','dark'); }
   }catch(e){}})();</script>
-  <link rel="stylesheet" href="assets/style.css">   
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
   <div class="wrap">
@@ -30,33 +31,73 @@
 
     <section id="info" aria-label="Info">
       <div class="kicker">Product & UX</div>
-      <h1>Isa is a product‑minded builder focused on simple, accessible experiences.</h1>
-      <p class="lede">Based in Australia. Currently exploring opportunities in aviation tech, digital banking, manufacturing, and AI‑powered tooling.</p>
+      <h1 class="animated-headline">Isa is a product-minded builder focused on simple, accessible experiences.</h1>
+      <p class="lede">Passionate about designing simple, meaningful experiences that help people get things done.</p>
 
-      <div class="two">
-        <div class="card">
-          <h2>About</h2>
-          <p>Hi, I’m Isa — an aspiring Product Manager with a background in retail operations and data work. I like shipping small, sharp tools that remove friction and help people get unstuck.</p>
-          <p>Previously: product owner in retail, app support at a financial firm. Volunteer: libraries, accessibility projects, and alumni mentoring.</p>
+      <!-- HORIZONTAL LAYOUT -->
+      <section class="info-grid">
+        <!-- About -->
+        <div class="card about-card">
+          <h2 class="about-title">
+            About
+            <img src="assets/img/isa-profile.png" alt="Isa Phuyuthanon" class="about-pic-inline">
+          </h2>
+
+          <p>Hi, I’m Isa. I received a bachelor’s degree in Computer Science from Goldsmiths, University of London, and aspire to a career in Product Management. Passionate about building tools that simplify processes, I focus on making technology more inclusive.</p>
+          <p>For my final year project, I developed a Real-time Sign Language Translator, a web-based solution that combines accessibility and computer vision to support more inclusive communication.</p>
         </div>
-        <div class="card">
+
+        <!-- Contact -->
+        <div class="card contact-card">
           <h2>Contact</h2>
-          <p><a href="mailto:4isapoul@gmail.com">4isapoul@gmail.com</a></p>
-          <p><a href="https://www.linkedin.com/in/isa-phu/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/isaphu" target="_blank" rel="noopener">GitHub</a></p>
-          <p><a href="resume.html">View Resume →</a></p>
-          <p><a href="work.html">See Work →</a></p>
+
+          <div class="contact-footer">
+            <p class="contact-note">Let’s connect. I’m open to collaborations and new opportunities.</p>
+          </div> 
+
+          <ul class="contact-list">
+            <li>
+              <span class="contact-link">
+                <i class="ri-mail-line" aria-hidden="true"></i>
+                4isapoul@gmail.com
+              </span>
+            </li>
+            <li>
+              <a class="contact-link" href="https://www.linkedin.com/in/isa-phu/" target="_blank" rel="noopener">
+                <i class="ri-linkedin-box-line" aria-hidden="true"></i>
+                <span>LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a class="contact-link" href="https://github.com/isaphu" target="_blank" rel="noopener">
+                <i class="ri-github-line" aria-hidden="true"></i>
+                <span>GitHub</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="contact-actions">
+            <a class="arrow-link" href="work.html">See Work</a>
+            <a class="arrow-link" href="resume.html">View Resume</a>
+          </div>
         </div>
-      </div>
+      </section>
+      <!-- /HORIZONTAL LAYOUT -->
     </section>
 
     <footer class="site-footer" role="contentinfo">
       <div class="footer-inner">
-        <span>© 2025<span id="year"></span> ISA </span>
+        <span>© <span id="year"></span> ISA</span>
         <span><a href="index.html">Info</a> · <a href="work.html">Work</a> · <a href="resume.html">Resume</a></span>
         <span>Built with ❤️ for simple design</span>
       </div>
     </footer>
   </div>
+
+  <script>
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
   <script src="assets/theme.js" defer></script>
 </body>
 </html>
