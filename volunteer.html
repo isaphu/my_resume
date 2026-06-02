@@ -16,11 +16,11 @@
 <body>
   <div class="wrap">
     <header>
-      <div class="brand"><a href="index.html">Isa Phuyuthanon</a></div>
+      <div class="brand"><a href="/">Isa Phuyuthanon</a></div>
       <nav aria-label="Primary">
-        <a href="index.html">Info</a>
-        <a href="work.html">Work</a>
-        <a href="resume.html">Resume</a>
+        <a href="/">Info</a>
+        <a href="/work">Work</a>
+        <a href="/resume">Resume</a>
       </nav>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
         <i class="ri-moon-line"></i>
@@ -48,7 +48,7 @@
               <p>One memorable experience was helping Orietta, a lady from Bolivia, set up her very first MacBook. We spent time walking through the interface until she felt comfortable navigating it on her own. Seeing her transition from uncertainty to confidence was incredibly rewarding, and it reinforces my belief that technology should be intuitive and inclusive for everyone.</p>
               <p>
                 My time at the library also highlighted the communication gaps faced by visitors with hearing impairments. This experience directly inspired me to develop my 
-                <a href="work.html" style="text-decoration: underline; text-underline-offset: 3px; font-weight: 600;">Real-time Sign Language Translator</a>. 
+                <a href="/work" style="text-decoration: underline; text-underline-offset: 3px; font-weight: 600;">Real-time Sign Language Translator</a>. 
                 The project is live and accessible from my work page.
               </p>
               <div class="tags">
@@ -99,72 +99,4 @@
                 <img src="assets/img/volunteer_photo/paris_2024/isa_paris_2.JPG" alt="Paris Paralympic game 2024">
                 <img src="assets/img/volunteer_photo/paris_2024/isa_paris_5.jpg" alt="Paris Paralympic game 2024">
                 <img src="assets/img/volunteer_photo/paris_2024/isa_paris_6.png" alt="Paris Paralympic game 2024">
-                <img src="assets/img/volunteer_photo/paris_2024/isa_paris_3.JPG" alt="Paris Paralympic game 2024">
-                <img src="assets/img/volunteer_photo/paris_2024/isa_cert_paris_4.jpg" alt="Paris Paralympic game 2024">
-              </div>
-            <p>My role was fast-paced and dynamic. I supported day-to-day operations including gate control and ticket scanning, with a particular focus on assisting spectators with disabilities and ensuring accessibility needs were met. This experience helped me develop patience and confidence in high-pressure environments, while always prioritising a safe and welcoming experience for everyone.</p>  
-            <p>I also worked as a Press Coordinator and assisted the Olympic Broadcasting Service (OBS). This gave me a unique behind-the-scenes perspective on how a global sporting event is broadcast to millions, requiring quick problem-solving and precise communication with international media teams.</p>            
-            <div class="tags">
-                <span class="tag">Sport</span>
-                <span class="tag">Paralympic</span>
-              </div>
-          </div>
-        </article>
-
-      </div>
-    </main>
-
-    <footer class="site-footer" role="contentinfo">
-      <div class="footer-inner">
-        <span>© <span id="year"></span> ISA</span>
-        <span>
-          <a href="index.html">Info</a> · 
-          <a href="work.html">Work</a> · 
-          <a href="resume.html">Resume</a>
-          <span style="opacity: 0.3; margin-left: 10px; margin-right: 2px;">|</span> 
-          <a href="volunteer.html" style="opacity: 0.5; font-size: 0.95em;">Volunteer</a>
-        </span>
-        <span>Built with ❤️ for simple design</span>
-      </div>
-    </footer>
-  </div>
-  
-  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <img id="lightbox-img" src="" alt="Full screen view">
-  </div>
-
-  <script src="assets/theme.js" defer></script>
-  <script>
-    // 1. Set Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // 2. Lightbox Logic
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-
-    // Add click event to all gallery images
-    document.querySelectorAll('.gallery img').forEach(img => {
-      img.addEventListener('click', function() {
-        lightbox.style.display = 'flex'; // Show overlay
-        lightboxImg.src = this.src;      // Set full image
-      });
-    });
-
-    // Close function
-    function closeLightbox() {
-      lightbox.style.display = 'none';
-    }
-
-    // Optional: Close on Escape key
-    document.addEventListener('keydown', function(event) {
-      if (event.key === "Escape") {
-        closeLightbox();
-      }
-    });
-
-    // Analytics (Keep existing)
-    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-  </script>
-  <script defer src="/_vercel/insights/script.js"></script>
-</body>
-</html>
+                <img src="assets/img/volunteer_photo/paris_2024/isa_paris_3.JPG" alt="Paris Paralympic game 20

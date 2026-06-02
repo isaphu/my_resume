@@ -16,11 +16,11 @@
 <body>
   <div class="wrap">
     <header>
-      <div class="brand"><a href="index.html">Isa Phuyuthanon</a></div>
+      <div class="brand"><a href="/">Isa Phuyuthanon</a></div>
       <nav aria-label="Primary">
-        <a href="index.html">Info</a>
-        <a href="work.html" aria-current="page">Work</a>
-        <a href="resume.html">Resume</a>
+        <a href="/">Info</a>
+        <a href="/work" aria-current="page">Work</a>
+        <a href="/resume">Resume</a>
       </nav>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
         <i class="ri-moon-line"></i>
@@ -30,7 +30,6 @@
     <main class="projects grid" aria-label="Selected work">
       <h1>Work</h1>
 
-      <!-- Project 1 Real time sign language translator -->
       <article class="card project-banner">
         <a class="project-cover" href="https://real-time-sing-language-translator.vercel.app/"
            target="_blank" rel="noopener"
@@ -48,7 +47,6 @@
       </article>
       
 
-      <!-- Project 2 To-do list for senior -->
       <article class="card project-banner">
         <a class="project-cover" href="https://github.com/isaphu/to-do-list-for-senior-citizen"
            target="_blank" rel="noopener"
@@ -64,7 +62,6 @@
         </div>
       </article>
 
-      <!-- Project 3 Bangkok Post -->
       <article class="card project-banner">
         <a class="project-cover" href="https://wd-final-submission-b3i39kf9p-isaphu.vercel.app/" 
           target="_blank" rel="noopener" 
@@ -80,15 +77,12 @@
         </div>
      </article>
 
-      <!-- Project 4 Music Visualizer -->
       <article class="card project-banner">
         <a class="project-cover" href="https://music-visualizer.vercel.app/"
            target="_blank" rel="noopener">
            
-          <!-- Video cover -->
           <video autoplay muted loop playsinline poster="assets/img/music_visualizer_3_cover.jpg" class="cover-video">
             <source src="assets/img/music_visualizer_3_cover.mp4" type="video/mp4">
-            <!-- fallback image if video not supported -->
             Your browser does not support the video tag.
           </video>
           
@@ -104,7 +98,6 @@
         </div>
       </article>
       
-      <!-- Project 5 Ninja game -->
       <article class="card project-banner">
         <a class="project-cover" href="https://ninja-game-ten.vercel.app/"
            target="_blank" rel="noopener"
@@ -120,7 +113,6 @@
         </div>
       </article>
 
-      <!-- Project 6 Infinity tracker -->
       <article class="card project-banner">
         <a class="project-cover" href="https://ninja-game-ten.vercel.app/"
            target="_blank" rel="noopener"
@@ -142,19 +134,18 @@
       <div class="footer-inner">
         <span>© <span id="year"></span> ISA</span>
         <span>
-          <a href="index.html">Info</a> · 
-          <a href="work.html">Work</a> · 
-          <a href="resume.html">Resume</a>
+          <a href="/">Info</a> · 
+          <a href="/work">Work</a> · 
+          <a href="/resume">Resume</a>
           
           <span style="opacity: 0.3; margin-left: 10px; margin-right: 2px;">|</span> 
           
-          <a href="volunteer.html" style="opacity: 0.5; font-size: 0.95em;">Volunteer</a>
+          <a href="/volunteer" style="opacity: 0.5; font-size: 0.95em;">Volunteer</a>
         </span>
         <span>Built with ❤️ for simple design</span>
       </div>
     </footer>
   </div>
-  <!-- Shared theme logic -->
   <script src="assets/theme.js" defer></script>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };

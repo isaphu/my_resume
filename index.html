@@ -7,7 +7,6 @@
   <meta name="description" content="About ISA Phuyuthanon — product-minded builder. Contact and quick links." />
   <link rel="icon" href="assets/img/isa-favicon3.png" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-  <!-- Early theme set (prevents flash) -->
   <script>(function(){try{
     var t=localStorage.getItem('theme');
     if(!t){ t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'; }
@@ -18,11 +17,11 @@
 <body>
   <div class="wrap">
     <header>
-      <div class="brand"><a href="index.html">Isa Phuyuthanon</a></div>
+      <div class="brand"><a href="/">Isa Phuyuthanon</a></div>
       <nav aria-label="Primary">
-        <a href="index.html" aria-current="page">Info</a>
-        <a href="work.html">Work</a>
-        <a href="resume.html">Resume</a>
+        <a href="/" aria-current="page">Info</a>
+        <a href="/work">Work</a>
+        <a href="/resume">Resume</a>
       </nav>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
         <i class="ri-moon-line"></i>
@@ -34,9 +33,7 @@
       <h1 class="animated-headline">Isa is a product-minded builder focused on simple, accessible experiences.</h1>
       <p class="lede">Passionate about designing simple, meaningful experiences that help people get things done.</p>
 
-      <!-- HORIZONTAL LAYOUT -->
       <section class="info-grid">
-        <!-- About -->
         <div class="card about-card">
           <h2 class="about-title">
             About
@@ -47,7 +44,6 @@
           <p>For my final year project, I developed a Real-time Sign Language Translator, a web-based solution that combines accessibility and computer vision to support more inclusive communication.</p>
         </div>
 
-        <!-- Contact -->
         <div class="card contact-card">
           <h2>Contact</h2>
 
@@ -77,25 +73,24 @@
           </ul>
 
           <div class="contact-actions">
-            <a class="arrow-link" href="work.html">See Work</a>
-            <a class="arrow-link" href="resume.html">View Resume</a>
+            <a class="arrow-link" href="/work">See Work</a>
+            <a class="arrow-link" href="/resume">View Resume</a>
           </div>
         </div>
       </section>
-      <!-- /HORIZONTAL LAYOUT -->
-    </section>
+      </section>
 
     <footer class="site-footer" role="contentinfo">
       <div class="footer-inner">
         <span>© <span id="year"></span> ISA</span>
         <span>
-          <a href="index.html">Info</a> · 
-          <a href="work.html">Work</a> · 
-          <a href="resume.html">Resume</a>
+          <a href="/">Info</a> · 
+          <a href="/work">Work</a> · 
+          <a href="/resume">Resume</a>
           
           <span style="opacity: 0.3; margin-left: 10px; margin-right: 2px;">|</span> 
           
-          <a href="volunteer.html" style="opacity: 0.5; font-size: 0.95em;">Volunteer</a>
+          <a href="/volunteer" style="opacity: 0.5; font-size: 0.95em;">Volunteer</a>
         </span>
         <span>Built with ❤️ for simple design</span>
       </div>
